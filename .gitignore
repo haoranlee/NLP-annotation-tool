@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.firebase/
+.firebaserc
+
+backend/node_modules/
+backend/server.js.bk
+
+functions/node_modules/
+functions/server.js.bk
+
+screen_captures/*/*.png
+screen_captures/*.png
+screen_captures/*.mp4
+screen_captures/*.gif
+
+src/config/userWhitelist.js
+src/config/firebaseConfig.js

@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.center-align {
+    width: 100%;
+}
+
+.carousel.carousel-slider {
+    height: 100vh;
+}
+
+.carousel .carousel-item {
+    margin: 5%;
+    border-radius: 1em;
+    left: -5% !important;
+    width: 90% !important;
+}
+
+.carousel.carousel-slider .carousel-item {
+    top: -5% !important;
+    height: 85% !important;
+    min-height: 85% !important;
+}
+
+.carousel .indicators .indicator-item {
+    background-color: #282828 !important;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #2828287f !important;
+}
+
+.loading-indicator {
+    height: 100%;
+    min-height: calc(100vh - 64px);
+}
+
+#updating-indicator {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.text-emphasis {
+    font-weight: bold;
+}
+
+.page-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3em;
+    background: white;
+    z-index: 1;
+    box-shadow: 0 0 1em #333;
+}
+  
+.page-progress-bar {
+    height: 0.3em;
+    background: #70a1ff;
+    width: 0%;
+}
+
+.WorkingArea {
+    display: flex;
+    flex-direction: row;
+}
+
+.TokenFooter {
+    height: 70vh;
+    padding-top: 1em;
+}
+ 
+.ScrollArea {
+    box-shadow: inset 1em 0 1em -1em #333;
+}
+
+.selection {
+    background: #70a2ff99;
+    border-radius: 0.25em;
+    border: 2px solid #70a1ff;
+}
+
+.box-wrap {
+    line-height: 3.0em;
+}
+
+.box-wrap > span {
+    text-align: center;
+    position: relative;
+}
+
+.box-wrap > span > .token {
+    padding: 0 0.25em;
+    border-radius: 0.25em;
+    font-size: 1.2em;
+}
+
+.box-wrap > span > .token {
+    background: #ced6e0;
+}
+
+.box-wrap > .ner-PER > .token::after {
+    font-family: "Material Icons";
+    content: "person";
+    font-size: 1em;
+    position: absolute;
+    top: 0.40em;
+    left: 50%;
+    margin-left: -0.5em;
+}
+
+.box-wrap > .ner-ORG > .token::after {
+    font-family: "Material Icons";
+    content: "business";
+    font-size: 1em;
+    position: absolute;
+    top: 0.40em;
+    left: 50%;
+    margin-left: -0.5em;
+}
+
+.box-wrap > .ner-LOC > .token::after {
+    font-family: "Material Icons";
+    content: "place";
+    font-size: 1em;
+    position: absolute;
+    top: 0.40em;
+    left: 50%;
+    margin-left: -0.5em;
+}
+
+.box-wrap > .ner-MISC > .token::after {
+    font-family: "Material Icons";
+    content: "more";
+    font-size: 1em;
+    position: absolute;
+    top: 0.40em;
+    left: 50%;
+    margin-left: -0.5em;
+}
+
+.box-wrap > .senti-1 > .token {
+    background: #7bed9f;
+}
+
+.box-wrap > .senti-0 > .token {
+    background: #eccc68;
+}
+
+.box-wrap > .senti--1 > .token {
+    background: #ff5a3d;
+}
+
+.box-wrap > .corefhas-yes > .token {
+    background: #70a2ffbb;
+}
+
+.box-wrap > .corefhas-yes > .coref-tag-cloud {
+    position: absolute;
+    top: 0.60em;
+    left: 0;
+}
+
+.box-wrap > .corefhas-yes > .coref-tag-cloud > .coref-tag {
+    font-size: 0.9em;
+    padding: 0 0.25em;
+    border-radius: 0.25em;
+    margin: 0 0.05em;
+}
+
+.coref-tag-color-0 {
+    background: #8dd3c7;
+}
+
+.coref-tag-color-1 {
+    background: #ffffb3;
+}
+
+.coref-tag-color-2 {
+    background: #bebada;
+}
+
+.coref-tag-color-3 {
+    background: #fb8072;
+}
+
+.coref-tag-color-4 {
+    background: #80b1d3;
+}
+
+.coref-tag-color-5 {
+    background: #fdb462;
+}
+
+.coref-tag-color-6 {
+    background: #b3de69;
+}
+
+.coref-tag-color-7 {
+    background: #fccde5;
+}
+
+.coref-tag-color-8 {
+    background: #d9d9d9;
+}
+
+.coref-tag-color-9 {
+    background: #bc80bd;
+}
+
+.coref-tag-color-10 {
+    background: #ccebc5;
+}
+
+.coref-tag-color-11 {
+    background: #ffed6f;
+}
+
+.box-wrap > .selected > .token {
+    filter: invert(90%);
+}
+
+.box-wrap > .selected > .token::after {
+    color: white;
+    top: 0.60em;
+}
+
+.box-wrap > .selected > .coref-tag-cloud > .coref-tag {
+    filter: invert(90%);
+}
+
+.BottomPanel {
+    z-index: 1;
+    background: rgba(206, 214, 224, 0.8);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.2em;
+    box-shadow: 0 0 1em #333;
+}
+
+.BottomPanelComponent {
+    width: 82.5%;
+    margin: 0.4em auto;
+}
+
+#TagRemovalButtons {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#TagRemovalButtons > div {
+    font-size: 1.2em;
+    font-style: normal;
+}
+
+.coref-number-adjust-enabled{
+    background: #ffffff;
+}
+
+.coref-number-adjust-disabled{
+    background: #999999;
+}
+
+#TagAddNumberSubmit{
+    background: #70a2ffbb;
+    margin-left: 1em;
+}
+
+.span-block {
+    display: block;
+}
+
+.tag-btn {
+    display: inline-block;
+    padding: 0 0.25em;
+    border-radius: 0.25em;
+    margin-top: 0.2em;
+    margin-right: 0.2em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tag-btn-icon {
+    font-size: 1em;
+}
+
+.tag-btn.default-tag-btn {
+    background: #ffffff;
+}
+
+.tag-btn.senti-1 {
+    background: #7bed9f;
+}
+
+.tag-btn.senti-0 {
+    background: #eccc68;
+}
+
+.tag-btn.senti--1 {
+    background: #ff5a3d;
+}
+
+.tag-btn:active {
+    filter: invert(90%);
+}
